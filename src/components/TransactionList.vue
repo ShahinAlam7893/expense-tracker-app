@@ -1,11 +1,39 @@
 <template>
     <div class="mt-4">
-      <h4>Transaction List</h4>
-      <div class="mb-3">
-        <button @click="$emit('filter-type', 'all')" class="btn btn-secondary me-2">All</button>
-        <button @click="$emit('filter-type', 'income')" class="btn btn-success me-2">Income</button>
-        <button @click="$emit('filter-type', 'expense')" class="btn btn-danger">Expense</button>
-      </div>
+      
+      <!-- <div class="mb-3">
+        <button @click="$emit('filter-type', 'all')">All</button>
+        <button @click="$emit('filter-type', 'income')">Income</button>
+        <button @click="$emit('filter-type', 'expense')">Expense</button>
+      </div> -->
+
+          <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioDisabled" checked>
+          <label class="form-check-label" for="flexRadioDisabled">
+            All
+          </label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled">
+          <label class="form-check-label" for="flexRadioCheckedDisabled">
+            Income
+          </label> 
+        </div>
+        <div class="form-check form-check-inline">
+          <input class="form-check-input" type="radio" name="flexRadioDisabled" id="flexRadioCheckedDisabled">
+          <label class="form-check-label" for="flexRadioCheckedDisabled">
+            Expense
+          </label>
+        </div>
+
+
+
+
+
+
+
+
+
       <table class="table table-bordered">
         <thead>
           <tr>

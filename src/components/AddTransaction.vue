@@ -1,24 +1,27 @@
 <template>
     <div class="card p-3 mt-3">
-      <h4>Add Transaction</h4>
-      <form @submit.prevent="handleSubmit">
+      <form @submit.prevent="handleSubmit" class="inputForm">
         <div class="mb-2">
-          <label>Title:</label>
-          <input v-model="title" class="form-control" required />
+      
+          <input v-model="title" class="form-control" placeholder="Title" required />
+
         </div>
         <div class="mb-2">
-          <label>Amount:</label>
+        
           <input v-model.number="amount" type="number" class="form-control" required />
         </div>
         <div class="mb-2">
-          <label>Type:</label>
-          <select v-model="type" class="form-control" required>
-            <option value="all">All</option>
+          
+          <select v-model="type" class="form-control" aria-placeholder="Type" required>
+            
             <option value="income">Income</option>
             <option value="expense">Expense</option>
           </select>
         </div>
-        <button class="btn btn-primary">Add</button>
+        <div>
+            <button type="submit" class="btn btn-primary">ADD</button>
+          </div>
+        
       </form>
     </div>
   </template>
